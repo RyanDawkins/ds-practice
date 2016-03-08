@@ -1,4 +1,4 @@
-public class BubbleSort<T extends Comparable>{
+public class BubbleSort<T extends Comparable> implements Sorter {
 
   private T[] list;
 
