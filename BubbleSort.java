@@ -1,16 +1,16 @@
-public class BubbleSort{
+public class BubbleSort<T extends Comparable>{
 
-  private Comparable[] list;
+  private T[] list;
 
-  public BubbleSort(Comparable[] list) {
+  public BubbleSort(T[] list) {
     this.list = list;
   }
 
-  public Comparable[] sort() {
+  public T[] sort() {
     return this.bubbleSort(this.list.length);
   }
 
-  public Comparable[] bubbleSort(int endPos) {
+  public T[] bubbleSort(int endPos) {
 
     if(endPos == 0) {
       return this.list;
@@ -22,7 +22,7 @@ public class BubbleSort{
       if(comparison > 0) {
         sorted = false;
 
-        Comparable temp = this.list[i];
+        T temp = this.list[i];
         this.list[i] = this.list[i-1];
         this.list[i-1] = temp;
       }

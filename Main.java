@@ -3,8 +3,8 @@ public class Main {
   public static void main(String[] args) {
 
     Integer[] list = {3, 1, 4, 5, 2};
-    BubbleSort bs = new BubbleSort(list);
-    list = (Integer[]) bs.sort();
+    BubbleSort<Integer> bs = new BubbleSort<Integer>(list);
+    list = bs.sort();
 
     for(int i = 0; i < list.length; i++) {
       System.out.print(list[i]+" ");
